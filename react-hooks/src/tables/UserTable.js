@@ -1,4 +1,4 @@
-import './UserTable.css';
+// import './UserTable.css';
 
 const UserTable = () => {
   return (
