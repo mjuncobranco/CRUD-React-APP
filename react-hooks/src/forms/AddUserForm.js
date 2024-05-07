@@ -10,8 +10,15 @@ function AddUserForm(props) {
     setUser({ ...user, [name]: value });
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (user.name.trim() === "" || user.username.trim() === "") return;
+    props.addUser(user);
+    setUser(initialFormState);
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name</label>
       <input
         type="text"
