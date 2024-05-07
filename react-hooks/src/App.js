@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import UserTable from "./tables/UserTable";
+import AddUserForm from "./forms/AddUserForm";
 
 function App() {
 
