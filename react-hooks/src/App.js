@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import UserTable from "./tables/UserTable";
 import AddUserForm from "./forms/AddUserForm";
 import EditUserForm from "./forms/EditUserForm";
+
 
 function App() {
   const usersData = [
@@ -37,6 +38,7 @@ function App() {
     setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
   };
 
+ 
   return (
     <div className="container">
       <h1>CRUD React App </h1>
