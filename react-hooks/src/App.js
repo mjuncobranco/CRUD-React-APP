@@ -1,8 +1,10 @@
-import React, { useState} from "react";
-import UserTable from "./tables/UserTable";
-import AddUserForm from "./forms/AddUserForm";
-import EditUserForm from "./forms/EditUserForm";
+import React, { useState } from "react";
+import MainWrapper from "./components/wrappers/MainWrapper";
 
+import UserTable from "./components/tables/UserTable";
+import AddUserForm from "./components/forms/AddUserForm";
+import EditUserForm from "./components/forms/EditUserForm";
+import ContentWrapper from "./components/wrappers/ContentWrapper";
 
 function App() {
   const usersData = [
@@ -38,30 +40,46 @@ function App() {
     setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
   };
 
- 
   return (
-    <div className="container">
-      <h1>CRUD React App </h1>
-      <div className="flex-row">
-        <div className="flex-large">
-          {editing ? (
-            <div>
-              <h2>Edit User</h2>
-              <EditUserForm setEditing={setEditing} currentUser={currentUser} updateUser={updateUser} />
-              </div>
-          ): (
-            <div>
-                <h2>Add user</h2>
-                <AddUserForm addUser={addUser} />
-            </div>
-            )}
-          <div className="flex-large">
-            <h2>View users</h2>
-            <UserTable users={users} deleteUser={deleteUser} editRow={editRow} />
-          </div>
-        </div>
-      </div>
-    </div>
+    <MainWrapper
+      content={
+        <>
+          <h1>CRUD React App </h1>
+
+          <ContentWrapper
+            content={
+              <>
+                <div className="flex-large">
+                  {editing ? (
+                    <div>
+                      <h2>Edit User</h2>
+                      <EditUserForm
+                        setEditing={setEditing}
+                        currentUser={currentUser}
+                        updateUser={updateUser}
+                      />
+                    </div>
+                  ) : (
+                    <div>
+                      <h2>Add user</h2>
+                      <AddUserForm addUser={addUser} />
+                    </div>
+                  )}
+                  <div className="flex-large">
+                    <h2>View users</h2>
+                    <UserTable
+                      users={users}
+                      deleteUser={deleteUser}
+                      editRow={editRow}
+                    />
+                  </div>
+                </div>
+              </>
+            }
+          ></ContentWrapper>
+        </>
+      }
+    ></MainWrapper>
   );
 }
 
