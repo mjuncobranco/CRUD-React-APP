@@ -25,6 +25,7 @@ function AddUserForm(props) {
         type="text"
         name="name"
         value={user.name}
+        placeholder="James"
         onChange={handleInputChange}
         required
       ></input>
@@ -33,6 +34,7 @@ function AddUserForm(props) {
         type="text"
         name="username"
         value={user.username}
+        placeholder="Logan78"
         onChange={handleInputChange}
         required
       ></input>
