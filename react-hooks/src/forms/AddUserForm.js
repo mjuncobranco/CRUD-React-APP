@@ -13,6 +13,7 @@ function AddUserForm(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (user.name.trim() === "" || user.username.trim() === "") return;
+    console.log(event)
     props.addUser(user);
     setUser(initialFormState);
   };
@@ -25,6 +26,7 @@ function AddUserForm(props) {
         name="name"
         value={user.name}
         onChange={handleInputChange}
+        required
       ></input>
       <label htmlFor="username">Username</label>
       <input
@@ -32,6 +34,7 @@ function AddUserForm(props) {
         name="username"
         value={user.username}
         onChange={handleInputChange}
+        required
       ></input>
       <button>Add new user</button>
     </form>

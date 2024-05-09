@@ -26,7 +26,7 @@ function EditUserForm(props) {
         onChange={handleInputChange}
         value={user.name}
       ></input>
-      <label htmlFor="name">Username</label>
+      <label htmlFor="username">Username</label>
       <input
         type="text"
         name="username"
@@ -35,7 +35,7 @@ function EditUserForm(props) {
       ></input>
       <button>Update User</button>
       <button
-        className="button muted-button"
+        className="button muted-button "
         onClick={() => props.setEditing(false)}
       >
         Cancel
