@@ -1,0 +1,29 @@
+.footer {
+  background-color: #021130; 
+  color: rgb(132, 128, 128); 
+  padding: 1rem;
+  text-align: center; 
+  position: fixed;
+  left: -2rem;
+  bottom: -2rem;
+  margin: 2rem;
+  width: 100%; 
+  text-transform: capitalize;
+}
+
+.date {
+  color: #bd370e; 
+  text-decoration: none; 
+  display: block;
+}
+
+.date a:hover {
+  text-decoration: underline; 
+}
+
+@media (min-width: 768px) {
+  .footer{
+    padding: 2rem;
+}
+}
+
