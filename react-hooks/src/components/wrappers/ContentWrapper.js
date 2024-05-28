@@ -1,8 +1,8 @@
-// import './ContentWrapper.css';
+import classes from './ContentWrapper.module.css';
 
 function ContentWrapper({content}) {
   return (
-    <div className='flex-row'>{content}</div>
+    <div className={classes['flex-content']}>{content}</div>
   );
 }
 
