@@ -32,6 +32,7 @@ td {
 
 .striped-table tr:nth-child(even) {
   background-color: rgb(207, 30, 30);
+  color:#fafafa;
 }
 
 .striped-table tr:nth-child(odd) {
