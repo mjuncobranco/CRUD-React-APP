@@ -76,23 +76,25 @@ h2 {
   }
 }
 
-.flex-large,
-.flex-table {
+.flex-large, .flex-table {
   padding-left: 1rem;
   padding-right: 1rem;
   flex-basis: 100%;
-  margin-bottom: 1rem;
 }
 
 .flex-table {
   overflow-x: auto;
 }
 @media (min-width: 768px) {
-  .flex-large,
+  
   .flex-table {
-    flex: 1;
-    margin-bottom: 1rem;
+    flex-basis:70%;
   }
+  .flex-large {
+    flex-basis: 30%;
+  }
+
+
 }
 
 /**
@@ -179,6 +181,8 @@ label {
   margin: 1rem 0 0.5rem;
   color: #fafafa;
 }
+
+
 
 ::-webkit-input-placeholder,
 ::-moz-placeholder,

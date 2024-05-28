@@ -77,10 +77,11 @@ function App() {
   // *CONDITIONAL RENDERING: IF EDITING SHOW editUserForm,IF NOT SHOW addUserForm*
 
   return (
+    <>
     <MainWrapper
       content={
         <>
-          <h1>SUPERHERO CRUD React App </h1>
+          <h1>&#9734; SUPERHERO CRUD React App &#9734; </h1>
 
           <ContentWrapper
             content={
@@ -132,10 +133,12 @@ function App() {
               </>
             }
           ></ContentWrapper>
-          <Footer></Footer>
+          
         </>
       }
     ></MainWrapper>
+    <Footer></Footer>
+    </>
   );
 }
 

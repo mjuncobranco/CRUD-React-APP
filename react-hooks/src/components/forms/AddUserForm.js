@@ -52,14 +52,16 @@ function AddUserForm(props) {
     <form onSubmit={handleSubmit}>
       <label htmlFor="name" >Name</label>
       <input
+     
         type="text"
         name="name"
         value={user.name}
         placeholder="James"
         onChange={handleInputChange}
       ></input>
-      <label htmlFor="username" >Username</label>
+      <label htmlFor="username"  >Username</label>
       <input
+      
         type="text"
         name="username"
         value={user.username}
