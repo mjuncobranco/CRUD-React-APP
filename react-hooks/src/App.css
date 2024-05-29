@@ -92,7 +92,14 @@ h2 {
     flex-basis: 30%;
   }
 }
-
+.height-fixer {
+  height: 100px;
+}
+@media (min-width: 768px) {
+  .height-fixer {
+    height: 180px;
+  }
+}
 /**
  * Buttons
  */

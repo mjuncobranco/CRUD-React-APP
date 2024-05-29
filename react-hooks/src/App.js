@@ -136,6 +136,7 @@ function App() {
           </>
         }
       ></MainWrapper>
+      <div className="height-fixer"></div>
       <Footer></Footer>
     </>
   );
