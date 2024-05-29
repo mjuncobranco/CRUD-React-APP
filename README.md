@@ -1,6 +1,6 @@
 # SUPERHERO CRUD App in React with Hooks
 
-This is a simple CRUD (Create, Read, Update, Delete) full responsive application built with React and React Hooks. The application allows you to manage a list of users, including adding new users, editing existing users, and deleting users.  
+This is a simple CRUD (Create, Read, Update, Delete) full responsive Superhero themed application built with React and React Hooks. The application allows you to manage a list of users, including adding new users, editing existing users, and deleting users.  
 
 ## Table of Contents
 
