@@ -10,6 +10,7 @@ import classes from "./components/modal/Modal.module.css";
 import Footer from "./components/footer/Footer";
 
 function App() {
+  //CREATING SOME EXISTING USERS
   const usersData = [
     { id: uuidv4().substring(0, 6), name: "Bruce", username: "batman_67" },
     { id: uuidv4().substring(0, 6), name: "Clark", username: "superman88" },
@@ -57,7 +58,6 @@ function App() {
     setEditing(true);
     setCurrentUser({ id: user.id, name: user.name, username: user.username });
     console.log(user);
-    // console.log(currentUser);
   };
 
   //UPDATING USER
@@ -78,66 +78,65 @@ function App() {
 
   return (
     <>
-    <MainWrapper
-      content={
-        <>
-          <h1>&#9734; SUPERHERO CRUD React App &#9734; </h1>
+      <MainWrapper
+        content={
+          <>
+            <h1>&#9734; SUPERHERO CRUD React App &#9734; </h1>
 
-          <ContentWrapper
-            content={
-              <>
-                <div className="flex-large">
-                  {editing ? (
-                    <div >
-                      <h2>Edit User</h2>
-                      <EditUserForm
-                        setEditing={setEditing}
-                        currentUser={currentUser}
-                        updateUser={updateUser}
-                      />
-                    </div>
-                  ) : (
-                    <div>
-                      <h2>Add user</h2>
-                      <AddUserForm addUser={addUser} />
-                    </div>
-                  )}
-                </div>
-                <div className="flex-table">
-                  <h2>View users</h2>
-                  <UserTable
-                    users={users}
-                    deleteUser={deleteUser}
-                    editRow={editRow}
-                  />
-
-                  {showModal && (
-                    <Modal>
-                      <div
-                        className={`${classes["modal-content"]} ${
-                          modalType === "update"
-                            ? classes.update
-                            : "" || modalType === "delete"
-                            ? classes.delete
-                            : ""
-                        }`}
-                      >
-                        <h2>{modalContent}</h2>
-                        <button onClick={() => setShowModal(false)}>
-                          Close
-                        </button>
+            <ContentWrapper
+              content={
+                <>
+                  <div className="flex-large">
+                    {editing ? (
+                      <div>
+                        <h2>Edit User</h2>
+                        <EditUserForm
+                          setEditing={setEditing}
+                          currentUser={currentUser}
+                          updateUser={updateUser}
+                        />
                       </div>
-                    </Modal>
-                  )}
-                </div>
-              </>
-            }
-          ></ContentWrapper>
-          
-        </>
-      }
-    ></MainWrapper>
-    <Footer></Footer>
+                    ) : (
+                      <div>
+                        <h2>Add user</h2>
+                        <AddUserForm addUser={addUser} />
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-table">
+                    <h2>View users</h2>
+                    <UserTable
+                      users={users}
+                      deleteUser={deleteUser}
+                      editRow={editRow}
+                    />
+
+                    {showModal && (
+                      <Modal>
+                        <div
+                          className={`${classes["modal-content"]} ${
+                            modalType === "update"
+                              ? classes.update
+                              : "" || modalType === "delete"
+                              ? classes.delete
+                              : ""
+                          }`}
+                        >
+                          <h2>{modalContent}</h2>
+                          <button onClick={() => setShowModal(false)}>
+                            Close
+                          </button>
+                        </div>
+                      </Modal>
+                    )}
+                  </div>
+                </>
+              }
+            ></ContentWrapper>
+          </>
+        }
+      ></MainWrapper>
+      <Footer></Footer>
     </>
   );
 }

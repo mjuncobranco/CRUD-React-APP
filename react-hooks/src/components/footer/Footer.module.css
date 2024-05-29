@@ -1,30 +1,26 @@
 .footer {
-  background-color: #021130; 
+  background-color: #021130;
   padding: 1rem;
-  text-align: center; 
+  text-align: center;
   margin: 0;
-  width: 100%; 
+  width: 100%;
   text-transform: capitalize;
 }
 .footer span {
   color: rgb(132, 128, 128);
-  
-
 }
 .date {
-  color: #bd370e; 
-  text-decoration: none; 
+  color: #bd370e;
+  text-decoration: none;
   display: block;
 }
 
 .date a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
-  .footer{
+  .footer {
     padding: 3rem;
+  }
 }
-
-}
-

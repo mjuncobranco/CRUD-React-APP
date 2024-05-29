@@ -1,7 +1,6 @@
-
 import React, { useState } from "react";
 import Modal from "../modal/Modal";
-import classes from '../modal/Modal.module.css';
+import classes from "../modal/Modal.module.css";
 
 function AddUserForm(props) {
   const initialFormState = { id: null, name: "", username: "" };
@@ -40,28 +39,24 @@ function AddUserForm(props) {
       failedToAddModal();
     } else {
       props.addUser(user);
-      
+
       setUser(initialFormState);
       newUserAdded();
     }
-  
-   
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name" >Name</label>
+      <label htmlFor="name">Name</label>
       <input
-     
         type="text"
         name="name"
         value={user.name}
         placeholder="James"
         onChange={handleInputChange}
       ></input>
-      <label htmlFor="username"  >Username</label>
+      <label htmlFor="username">Username</label>
       <input
-      
         type="text"
         name="username"
         value={user.username}
@@ -71,7 +66,15 @@ function AddUserForm(props) {
       <button className="button">Add new user</button>
       {showModal && (
         <Modal>
-          <div className={`${classes["modal-content"]} ${modalType === "success" ? classes.success : "" || modalType === "error" ? classes.error : ""}`}>
+          <div
+            className={`${classes["modal-content"]} ${
+              modalType === "success"
+                ? classes.success
+                : "" || modalType === "error"
+                ? classes.error
+                : ""
+            }`}
+          >
             <h2>{modalContent}</h2>
             <button onClick={() => setShowModal(false)}>Close</button>
           </div>

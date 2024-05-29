@@ -1,8 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 
 function EditUserForm(props) {
-
   const [user, setUser] = useState(props.currentUser);
 
   //HANDLING INPUT CHANGES WHEN EDITING USER
@@ -27,7 +25,6 @@ function EditUserForm(props) {
       <input
         type="text"
         name="name"
-        
         onChange={handleInputChange}
         value={user.name}
       ></input>
@@ -39,10 +36,7 @@ function EditUserForm(props) {
         value={user.username}
       ></input>
       <button className="button">Update User</button>
-      <button
-        className="button"
-        onClick={() => props.setEditing(false)}
-      >
+      <button className="button" onClick={() => props.setEditing(false)}>
         Cancel
       </button>
     </form>

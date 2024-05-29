@@ -26,11 +26,8 @@ body {
 button,
 input {
   font-family: inherit;
-
   font-size: 100%;
-
   line-height: 1.15;
-
   margin: 0;
   overflow: visible;
 }
@@ -76,7 +73,8 @@ h2 {
   }
 }
 
-.flex-large, .flex-table {
+.flex-large,
+.flex-table {
   padding-left: 1rem;
   padding-right: 1rem;
   flex-basis: 100%;
@@ -85,16 +83,14 @@ h2 {
 .flex-table {
   overflow-x: auto;
 }
+
 @media (min-width: 768px) {
-  
   .flex-table {
-    flex-basis:70%;
+    flex-basis: 70%;
   }
   .flex-large {
     flex-basis: 30%;
   }
-
-
 }
 
 /**
@@ -181,8 +177,6 @@ label {
   margin: 1rem 0 0.5rem;
   color: #fafafa;
 }
-
-
 
 ::-webkit-input-placeholder,
 ::-moz-placeholder,

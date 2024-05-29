@@ -1,11 +1,10 @@
-.content-table  {
+.content-table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
   max-width: 100%;
   margin: 0 0 1.5rem 0;
   background-color: rgb(207, 30, 30);
-  
 }
 
 thead th {
@@ -14,40 +13,38 @@ thead th {
   color: #fafafa;
 }
 
-.center  {
+.center {
   text-align: center;
 }
 
 td {
   border-bottom: 1px solid #5d4141;
-
 }
 
 th,
 td {
   text-align: left;
   padding: 1rem;
-  
 }
 
 .striped-table tr:nth-child(even) {
   background-color: rgb(207, 30, 30);
-  color:#fafafa;
+  color: #fafafa;
 }
 
 .striped-table tr:nth-child(odd) {
   background-color: #fafafa;
 }
 
-.striped-table tr:nth-child(even) .table-button  {
+.striped-table tr:nth-child(even) .table-button {
   color: #fafafa;
   background: black;
-  border:1px solid #fafafa;
+  border: 1px solid #fafafa;
   width: 100%;
   cursor: pointer;
 }
 
-.striped-table tr:nth-child(odd) .table-button  {
+.striped-table tr:nth-child(odd) .table-button {
   background: #fafafa;
   color: black;
   border: 1px solid black;
@@ -55,20 +52,17 @@ td {
   cursor: pointer;
 }
 
-.striped-table tr:nth-child(even) .table-button:hover, 
+.striped-table tr:nth-child(even) .table-button:hover,
 .striped-table tr:nth-child(even) .table-button:focus,
 .striped-table tr:nth-child(even) .table-button:active {
   background: #fafafa;
   color: black;
   border: 1px solid black;
 }
-.striped-table tr:nth-child(odd) .table-button:hover, 
+.striped-table tr:nth-child(odd) .table-button:hover,
 .striped-table tr:nth-child(odd) .table-button:focus,
 .striped-table tr:nth-child(odd) .table-button:active {
   color: #fafafa;
   background: black;
-  border:1px solid #fafafa;
+  border: 1px solid #fafafa;
 }
-
-
-
