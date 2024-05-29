@@ -28,7 +28,7 @@ To get started with this project, follow these steps:
 
     ```sh
     git clone https://github.com/mjuncobranco/CRUD-React-APP.git
-    cd react-hooks
+    cd CRUD-React-APP/react-hooks
     ```
 
 2. **Install dependencies:**
