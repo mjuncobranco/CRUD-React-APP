@@ -8,6 +8,7 @@ import EditUserForm from "./components/forms/EditUserForm";
 import Modal from "./components/modal/Modal";
 import classes from "./components/modal/Modal.module.css";
 import Footer from "./components/footer/Footer";
+import ModalDelete from "./components/modalDelete/ModalDelete";
 
 function App() {
   //CREATING SOME EXISTING USERS
@@ -23,6 +24,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState("");
   const [modalType, setModalType] = useState("");
+  const [userToDelete, setUserToDelete] = useState(null);
 
   //ADDING A NEW USER
   const addUser = (user) => {
@@ -33,12 +35,17 @@ function App() {
   //DELETING USER
 
   const deleteUser = (id) => {
-    setEditing(false);
-
-    setUsers(users.filter((user) => user.id !== id));
-    handleDeleteModal();
+    setUserToDelete(id);
+    console.log(userToDelete);
+    setModalType("confirmDelete");
+    setShowModal(true);
   };
 
+  const confirmDeleteUser = () => {
+    setUsers(users.filter((user) => user.id !== userToDelete));
+    handleDeleteModal();
+    setShowModal(false);
+  };
   const handleDeleteModal = () => {
     setModalContent("This user has been deleted.");
     setModalType("delete");
@@ -75,7 +82,7 @@ function App() {
     }, 300);
   };
   // *CONDITIONAL RENDERING: IF EDITING SHOW editUserForm,IF NOT SHOW addUserForm*
-
+  console.log(modalType);
   return (
     <>
       <MainWrapper
@@ -111,7 +118,15 @@ function App() {
                       editRow={editRow}
                     />
 
-                    {showModal && (
+                    {showModal && modalType === "confirmDelete" && (
+                      <Modal>
+                        <ModalDelete
+                          onCancel={() => setShowModal(false)}
+                          onConfirm={confirmDeleteUser}
+                        />
+                      </Modal>
+                    )}
+                    {showModal && modalType !== "confirmDelete" && (
                       <Modal>
                         <div
                           className={`${classes["modal-content"]} ${
