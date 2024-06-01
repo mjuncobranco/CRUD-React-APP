@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/CRUD-React-APP/react-hooks/static/css/main.493487a6.css",
-    "main.js": "/CRUD-React-APP/react-hooks/static/js/main.ec8ec857.js",
-    "index.html": "/CRUD-React-APP/react-hooks/index.html",
-    "main.493487a6.css.map": "/CRUD-React-APP/react-hooks/static/css/main.493487a6.css.map",
-    "main.ec8ec857.js.map": "/CRUD-React-APP/react-hooks/static/js/main.ec8ec857.js.map"
+    "main.css": "/CRUD-React-APP/static/css/main.5f704b56.css",
+    "main.js": "/CRUD-React-APP/static/js/main.b055c0ab.js",
+    "index.html": "/CRUD-React-APP/index.html",
+    "main.5f704b56.css.map": "/CRUD-React-APP/static/css/main.5f704b56.css.map",
+    "main.b055c0ab.js.map": "/CRUD-React-APP/static/js/main.b055c0ab.js.map"
   },
   "entrypoints": [
-    "static/css/main.493487a6.css",
-    "static/js/main.ec8ec857.js"
+    "static/css/main.5f704b56.css",
+    "static/js/main.b055c0ab.js"
   ]
 }
