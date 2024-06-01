@@ -69,5 +69,6 @@ Contributions are welcome! If you have any suggestions or improvements, feel fre
 
 - [Tania Rascia](https://www.taniarascia.com) for the excellent tutorial on which this project is based. 
 - [Anton Hangano](https://github.com/anton-hangano) for sharing your valuable  knowledge and for your kind support. 
+- [Manuel Moraga Molina](https://github.com/Manuel-M-M) for pushing me to embrace new challenges and offering your guidance. 
 
 
